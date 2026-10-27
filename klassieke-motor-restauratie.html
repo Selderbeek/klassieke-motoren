@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Klassieke motorrestauratieprojecten, ervaringen, blogs en praktische tips over Yamaha, BMW en Puch.">
+  <meta name="theme-color" content="#004225">
+  <title>Klassieke Motor Restauratie | Projecten, blogs & tips</title>
+  <style>
+    :root {
+      --bg: #004225;
+      --panel: #10251c;
+      --panel-soft: rgba(255,255,255,.055);
+      --text: #fff;
+      --muted: #d1ded6;
+      --accent: #c04a2c;
+      --max-width: 1100px;
+      --radius: 14px;
+      --gap: 18px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      color-scheme: dark;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: #ffd2c7; }
+    .container { width: min(100% - 32px, var(--max-width)); margin: 0 auto; }
+    header { padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.15); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 13px; min-width: 0; }
+    .logo { width: 56px; height: 56px; flex: 0 0 56px; border-radius: 10px; background: linear-gradient(135deg,var(--accent),#8b2b18); display: grid; place-items: center; font-weight: 800; font-size: 19px; }
+    .brand-title { font-weight: 800; font-size: clamp(17px, 2.5vw, 22px); line-height: 1.2; }
+    .brand-subtitle { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    nav { display: flex; flex-wrap: wrap; gap: 5px; }
+    nav a { color: var(--muted); text-decoration: none; padding: 8px 10px; border-radius: 8px; }
+    nav a:hover, nav a:focus-visible { color: #fff; background: rgba(255,255,255,.1); }
+    .menu-toggle { display: none; background: var(--panel); color: white; border: 1px solid rgba(255,255,255,.2); border-radius: 9px; padding: 9px 12px; font: inherit; }
+    main { padding: 26px 0 10px; }
+    .card { background: rgba(0,0,0,.22); border: 1px solid rgba(255,255,255,.08); padding: clamp(16px, 3vw, 24px); border-radius: var(--radius); margin-bottom: 20px; }
+    h1,h2,h3 { margin: 0 0 9px; line-height: 1.25; }
+    h1 { font-size: clamp(28px, 5vw, 42px); }
+    h2 { font-size: clamp(22px, 3vw, 28px); }
+    h3 { font-size: 19px; }
+    p { margin: 0 0 12px; color: var(--muted); }
+    p:last-child { margin-bottom: 0; }
+    .hero { background: linear-gradient(135deg, rgba(0,0,0,.25), rgba(0,0,0,.08)); }
+    .hero p { max-width: 760px; font-size: 17px; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,240px),1fr)); gap: var(--gap); margin-top: 14px; }
+    .project, .post { background: var(--panel-soft); padding: 16px; border-radius: 11px; border: 1px solid rgba(255,255,255,.06); }
+    .meta { color: #c5d4cb; font-size: 14px; margin: 0 0 10px; }
+    .btn { display: inline-block; padding: 10px 14px; border-radius: 9px; background: var(--accent); color: #fff; text-decoration: none; border: 0; cursor: pointer; font: inherit; font-weight: 650; }
+    .btn:hover, .btn:focus-visible { background: #a93d23; }
+    .blog-list { display: grid; gap: 12px; }
+    .tips details { padding: 14px 0; border-top: 1px solid rgba(255,255,255,.13); }
+    .tips details:first-of-type { margin-top: 8px; }
+    summary { cursor: pointer; font-weight: 700; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap: 12px; }
+    .photo-placeholder { min-height: 125px; border-radius: 9px; border: 2px dashed rgba(255,255,255,.25); background: var(--panel-soft); display: grid; place-items: center; padding: 12px; text-align: center; color: var(--muted); }
+    form { display: grid; gap: 11px; max-width: 620px; }
+    label { font-weight: 650; }
+    input, textarea { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,.25); background: rgba(0,0,0,.16); color: white; font: inherit; }
+    input:focus, textarea:focus { outline: 2px solid #ffd2c7; outline-offset: 2px; }
+    .form-note { font-size: 14px; }
+    footer { padding: 14px 0 30px; color: var(--muted); text-align: center; font-size: 14px; }
+    .notice { border-left: 4px solid var(--accent); padding: 10px 13px; background: rgba(0,0,0,.16); border-radius: 5px; }
+    @media (max-width: 820px) {
+      .header-inner { flex-wrap: wrap; }
+      .menu-toggle { display: inline-block; margin-left: auto; }
+      nav { display: none; width: 100%; flex-direction: column; padding-top: 8px; }
+      nav.open { display: flex; }
+      nav a { padding: 10px; }
+    }
+    @media print {
+      body { background: #fff; color: #111; }
+      .card { background: #fff; border: 1px solid #ccc; }
+      p, .meta, footer { color: #333; }
+      nav, .menu-toggle, .btn, form { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">KM</div>
+        <div>
+          <div class="brand-title">Klassieke Motor Restauratie</div>
+          <div class="brand-subtitle">Restauratie · techniek · verhalen</div>
+        </div>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+      <nav id="site-nav" aria-label="Hoofdnavigatie">
+        <a href="#projects">Projecten</a>
+        <a href="#blogs">Blog</a>
+        <a href="#tips">Tips</a>
+        <a href="#gallery">Galerij</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card hero">
+      <h1>Welkom bij Klassieke Motor Restauratie</h1>
+      <p>Een plek voor restauratieprojecten, ervaringen en praktische informatie over klassieke motoren. Bekijk de projecten, lees de blog en verzamel ideeën voor je eigen restauratie.</p>
+      <p class="notice">Dit is een voorbeeldwebsite die je direct op je computer kunt openen. Hij werkt offline; voor publicatie op internet is later webhosting nodig.</p>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Restauratieprojecten</h2>
+      <p>Voorbeeldpagina met drie projecten. De verslagen hieronder zijn voorbeeldbestanden die je kunt downloaden en later vervangen door je eigen informatie.</p>
+      <div class="projects">
+        <article class="project">
+          <h3>Yamaha Diversion 900cc</h3>
+          <p class="meta">Volledig restauratieproject</p>
+          <p>Werkzaamheden, onderdelen, foto's en notities bijhouden.</p>
+          <button class="btn download" data-file="yamaha-diversion-900cc.txt">Download restauratieverslag</button>
+        </article>
+        <article class="project">
+          <h3>BMW R50/2 uit 1969</h3>
+          <p class="meta">Frame- en motorblokrestauratie</p>
+          <p>Een overzicht van de inspectie, revisie, onderdelen en afstellingen.</p>
+          <button class="btn download" data-file="bmw-r50-1969.txt">Download onderdelenlijst</button>
+        </article>
+        <article class="project">
+          <h3>Puch 250 TF</h3>
+          <p class="meta">Volledig restauratieproject</p>
+          <p>Werkzaamheden en ervaringen tijdens de restauratie documenteren.</p>
+          <button class="btn download" data-file="puch-250-tf.txt">Download restauratieverslag</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="blogs" class="card">
+      <h2>Blog</h2>
+      <div class="blog-list">
+        <article class="post">
+          <h3>Eerste kennismaking met de Puch</h3>
+          <p class="meta">5 januari 2025 · Puch</p>
+          <p>Een eerste blik op de motor: binnenkomst, de huidige staat en de plannen voor het project.</p>
+        </article>
+        <article class="post">
+          <h3>BMW-frame revisie</h3>
+          <p class="meta">20 februari 2025 · BMW</p>
+          <p>De eerste stappen bij het controleren en herstellen van het BMW-frame.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="tips" class="card tips">
+      <h2>Tips & handleidingen</h2>
+      <details>
+        <summary>Motorblok reviseren</summary>
+        <p>Algemene volgorde: demonteren, onderdelen labelen, inspecteren, meten, reinigen, monteren en afstellen. Raadpleeg altijd het werkplaatshandboek voor de juiste toleranties en aanhaalmomenten.</p>
+      </details>
+      <details>
+        <summary>Frame lakken</summary>
+        <p>Ontvet het frame, verwijder roest en oude lak waar nodig, gebruik een geschikte primer en lak en houd je aan de veiligheidsinstructies en droogtijden van de fabrikant.</p>
+      </details>
+    </section>
+
+    <section id="gallery" class="card">
+      <h2>Galerij</h2>
+      <div class="gallery-grid">
+        <div class="photo-placeholder">Plaats hier een foto van een klassieke motor</div>
+        <div class="photo-placeholder">Plaats hier een detailfoto van een restauratie</div>
+        <div class="photo-placeholder">Plaats hier een foto van het eindresultaat</div>
+      </div>
+      <p style="margin-top:12px">Later kun je deze vakken vervangen door je eigen foto's.</p>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Dit formulier is een voorbeeld. Het verstuurt nog geen e-mail, omdat daarvoor een e-maildienst of serverinstelling nodig is.</p>
+      <form id="contact-form">
+        <div>
+          <label for="name">Naam</label>
+          <input id="name" name="name" type="text" placeholder="Je naam" required>
+        </div>
+        <div>
+          <label for="email">E-mailadres</label>
+          <input id="email" name="email" type="email" placeholder="jij@voorbeeld.nl" required>
+        </div>
+        <div>
+          <label for="message">Bericht</label>
+          <textarea id="message" name="message" rows="5" placeholder="Waar kan ik mee helpen?"></textarea>
+        </div>
+        <button type="submit" class="btn">Verstuur testbericht</button>
+      </form>
+      <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="container">
+    © <span id="year">2026</span> Klassieke Motor Restauratie · Voorbeeldwebsite
+  </footer>
+
+  <script>
+    const reports = {
+      "yamaha-diversion-900cc.txt": "Restauratieverslag - Yamaha Diversion 900cc\\nDatum: voorbeeld\\n\\nWerkzaamheden:\\n- Vul hier de uitgevoerde werkzaamheden in.\\n- Voeg hier onderdelen, kosten en notities toe.\\n",
+      "bmw-r50-1969.txt": "Onderdelenlijst - BMW R50/2 (1969)\\n\\n- Onderdeel: ____________________\\n  Aantal: ______  Opmerking: ____________________\\n- Onderdeel: ____________________\\n  Aantal: ______  Opmerking: ____________________\\n",
+      "puch-250-tf.txt": "Restauratieverslag - Puch 250 TF\\nDatum: voorbeeld\\n\\nWerkzaamheden:\\n- Vul hier de uitgevoerde werkzaamheden in.\\n- Voeg hier onderdelen, kosten en notities toe.\\n"
+    };
+
+    document.querySelectorAll(".download").forEach((button) => {
+      button.addEventListener("click", () => {
+        const file = button.dataset.file;
+        const content = reports[file] || "Nog geen inhoud beschikbaar.\\n";
+        const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = file;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      });
+    });
+
+    const menuButton = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("#site-nav");
+    menuButton.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.textContent = isOpen ? "✕ Menu sluiten" : "☰ Menu";
+    });
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰ Menu";
+      });
+    });
+
+    document.querySelector("#contact-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      document.querySelector("#form-note").textContent =
+        "Dit is een test: er is geen bericht verzonden. Voor een echt contactformulier moet de website aan een e-maildienst worden gekoppeld.";
+    });
+    document.querySelector("#year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
